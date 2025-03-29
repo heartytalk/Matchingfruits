@@ -7,8 +7,7 @@
         body { text-align: center; font-family: Arial, sans-serif; }
         .game-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
         .fruit-box, .word { padding: 20px; border: 2px solid #ccc; border-radius: 5px; cursor: pointer; font-size: 2rem; }
-        .fruit-box { width: 300px; height: 300px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
-        .fruit-box img { width: 200px; height: 200px; }
+        .fruit-box { width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 4rem; }
         .word { background-color: #ffeb3b; display: inline-block; margin: 10px; }
         .message { margin-top: 20px; font-size: 2rem; font-weight: bold; }
         .set-title { font-size: 2rem; font-weight: bold; margin-bottom: 20px; }
@@ -21,17 +20,17 @@
     <div id="message" class="message"></div>
     <script>
         const fruits = [
-            { name: "사과", image: "https://cdn.pixabay.com/photo/2015/03/26/09/39/apple-690027_960_720.jpg" },
-            { name: "바나나", image: "https://cdn.pixabay.com/photo/2018/08/16/20/03/bananas-3616193_960_720.jpg" },
-            { name: "키위", image: "https://cdn.pixabay.com/photo/2016/11/18/15/56/kiwi-1839735_960_720.jpg" },
-            { name: "망고", image: "https://cdn.pixabay.com/photo/2016/07/22/09/59/mango-1534061_960_720.jpg" },
-            { name: "딸기", image: "https://cdn.pixabay.com/photo/2018/03/20/23/11/strawberries-3249761_960_720.jpg" },
-            { name: "수박", image: "https://cdn.pixabay.com/photo/2018/08/23/08/55/watermelon-3622979_960_720.jpg" },
-            { name: "포도", image: "https://cdn.pixabay.com/photo/2016/08/23/15/45/grapes-1616662_960_720.jpg" },
-            { name: "체리", image: "https://cdn.pixabay.com/photo/2018/06/28/19/17/cherries-3504853_960_720.jpg" },
-            { name: "블루베리", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/blueberries-1239279_960_720.jpg" },
-            { name: "파인애플", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/pineapple-1239425_960_720.jpg" },
-            { name: "오렌지", image: "https://cdn.pixabay.com/photo/2016/11/29/04/17/oranges-1868612_960_720.jpg" }
+            { name: "사과", emoji: "🍎" },
+            { name: "바나나", emoji: "🍌" },
+            { name: "키위", emoji: "🥝" },
+            { name: "망고", emoji: "🥭" },
+            { name: "딸기", emoji: "🍓" },
+            { name: "수박", emoji: "🍉" },
+            { name: "포도", emoji: "🍇" },
+            { name: "체리", emoji: "🍒" },
+            { name: "블루베리", emoji: "🫐" },
+            { name: "파인애플", emoji: "🍍" },
+            { name: "오렌지", emoji: "🍊" }
         ];
 
         let currentSet = 0;
@@ -64,7 +63,7 @@
                 let fruitBox = document.createElement("div");
                 fruitBox.className = "fruit-box";
                 fruitBox.dataset.name = fruit.name;
-                fruitBox.innerHTML = `<img src="${fruit.image}" alt="${fruit.name}"><p></p>`;
+                fruitBox.innerHTML = `${fruit.emoji}<p></p>`;
                 fruitBox.ondragover = (event) => event.preventDefault();
                 fruitBox.ondrop = (event) => {
                     event.preventDefault();
@@ -111,8 +110,6 @@
 
         window.onload = loadGame;
     </script>
-</body>
-</html>
 </body>
 </html>
 
