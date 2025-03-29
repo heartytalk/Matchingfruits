@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -21,17 +22,17 @@
     <div id="message" class="message"></div>
     <script>
         const fruits = [
-            { name: "사과", image: "https://pixabay.com/ko/photos/%EC%82%AC%EA%B3%BC-%EA%B3%BC%EC%9D%BC-%EB%86%8D%EC%9E%A5-%EC%9D%8C%EC%8B%9D-7566512/" },
-            { name: "바나나", image: "https://pixabay.com/ko/photos/%EB%B0%94%EB%82%98%EB%82%98-%EA%B3%BC%EC%9D%BC-%EC%9D%B5%EC%9D%80-%EC%8B%A0%EC%84%A0%ED%95%9C-614090/" },
-            { name: "키위", image: "https://pixabay.com/ko/photos/%ED%82%A4%EC%9C%84-%EA%B3%BC%EC%9D%BC-%EA%B3%BC%EC%9D%BC-%ED%82%A4%EC%9C%84-%EC%9D%8C%EC%8B%9D-400143/" },
-            { name: "망고", image: "https://pixabay.com/ko/photos/%EB%A7%9D%EA%B3%A0-%EC%8B%A0%EC%84%A0%ED%95%9C-%EA%B3%BC%EC%9D%BC-%EB%85%B8%EB%9E%80%EC%83%89-3485606/" },
-            { name: "딸기", image: "https://pixabay.com/ko/photos/%EB%94%B8%EA%B8%B0-%EA%B3%BC%EC%9D%BC-%EB%B9%A8%EA%B0%84%EC%83%89-%EC%9D%B5%EC%9D%80-1396330/" },
-            { name: "수박", image: "https://pixabay.com/ko/photos/%EC%88%98%EB%B0%95-%EA%B3%BC%EC%9D%BC-%EC%88%98%ED%99%95-%EC%83%9D%EC%82%B0-551235/" },
-            { name: "포도", image: "https://pixabay.com/ko/photos/%ED%8F%AC%EB%8F%84-%ED%91%B8%EB%A5%B8-%ED%8F%AC%EB%8F%84-%ED%8F%AC%EB%8F%84%EC%9B%90-%EB%86%8D%EC%97%85-8306833/" },
-            { name: "체리", image: "https://pixabay.com/ko/photos/%EB%B2%84%EC%B0%8C-%EA%B3%BC%EC%9D%BC-%EC%9D%8C%EC%8B%9D-%EB%AA%A8%EB%A0%90%EB%A1%9C-%EC%B2%B4%EB%A6%AC-371233/" },
-            { name: "블루베리", image: "https://pixabay.com/ko/photos/%EB%B8%94%EB%A3%A8%EB%B2%A0%EB%A6%AC-%EB%B8%94%EB%A3%A8-%EB%B2%A0%EB%A6%AC-%EA%B3%BC%EC%9D%BC-873784/" },
-            { name: "파인애플", image: "https://pixabay.com/ko/photos/%ED%8C%8C%EC%9D%B8%EC%95%A0%ED%94%8C-%EC%A1%B0%EA%B0%81-%EA%B3%BC%EC%9D%BC-%EB%B9%84%ED%83%80%EB%AF%BC-636562/" },
-            { name: "오렌지", image: "https://pixabay.com/ko/photos/%EC%98%A4%EB%A0%8C%EC%A7%80-%EA%B3%BC%EC%9D%BC-%EC%9D%8C%EC%8B%9D-407429/" }
+            { name: "사과", image: "https://cdn.pixabay.com/photo/2017/09/26/13/50/apple-2788662_640.jpg" },
+            { name: "바나나", image: "https://cdn.pixabay.com/photo/2018/08/16/20/03/bananas-3616193_640.jpg" },
+            { name: "키위", image: "https://cdn.pixabay.com/photo/2016/11/18/15/56/kiwi-1839735_640.jpg" },
+            { name: "망고", image: "https://cdn.pixabay.com/photo/2016/07/22/09/59/mango-1534061_640.jpg" },
+            { name: "딸기", image: "https://cdn.pixabay.com/photo/2018/03/20/23/11/strawberries-3249761_640.jpg" },
+            { name: "수박", image: "https://cdn.pixabay.com/photo/2018/08/23/08/55/watermelon-3622979_640.jpg" },
+            { name: "포도", image: "https://cdn.pixabay.com/photo/2016/08/23/15/45/grapes-1616662_640.jpg" },
+            { name: "체리", image: "https://cdn.pixabay.com/photo/2018/06/28/19/17/cherries-3504853_640.jpg" },
+            { name: "블루베리", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/blueberries-1239279_640.jpg" },
+            { name: "파인애플", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/pineapple-1239425_640.jpg" },
+            { name: "오렌지", image: "https://cdn.pixabay.com/photo/2016/11/29/04/17/oranges-1868612_640.jpg" }
         ];
         
         let currentSet = 0;
@@ -113,6 +114,7 @@
     </script>
 </body>
 </html>
+
     하트선생님이 언어치료 수업을 위해 만들었어요.
     @heartytalk_slp
     tjdah0420@naver.com
