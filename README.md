@@ -7,10 +7,31 @@
         body { text-align: center; font-family: Arial, sans-serif; }
         .game-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
         .fruit-box, .word { padding: 20px; border: 2px solid #ccc; border-radius: 5px; cursor: pointer; font-size: 2rem; }
-        .fruit-box { width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 4rem; }
-        .word { background-color: #ffeb3b; display: inline-block; margin: 10px; }
-        .message { margin-top: 20px; font-size: 2rem; font-weight: bold; }
-        .set-title { font-size: 2rem; font-weight: bold; margin-bottom: 20px; }
+        .fruit-box { 
+            width: 200px; 
+            height: 200px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column; 
+            font-size: 6rem; /* 이모지 크기 증가 */
+            text-align: center; /* 이름도 가운데 정렬 */
+        }
+        .word { 
+            background-color: #ffeb3b; 
+            display: inline-block; 
+            margin: 10px; 
+        }
+        .message { 
+            margin-top: 20px; 
+            font-size: 2rem; 
+            font-weight: bold; 
+        }
+        .set-title { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+        }
     </style>
 </head>
 <body>
