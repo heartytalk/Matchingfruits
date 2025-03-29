@@ -5,28 +5,40 @@
     <title>과일 한글 낱말 맞추기</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
-        .game-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-        .fruit-box, .word { padding: 20px; border: 2px solid #ccc; border-radius: 5px; cursor: pointer; font-size: 2rem; }
+        .game-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        .fruit-box, .word { 
+            padding: 10px; 
+            border: 2px solid #ccc; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 2rem; 
+            user-select: none; /* 텍스트 선택 방지 */
+        }
         .fruit-box { 
-            width: 180px; 
-            height: 180px; 
+            width: min(180px, 30vw); 
+            height: min(180px, 30vw); 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             flex-direction: column; 
             font-size: 4rem; /* 이모지 크기 조정 */
             text-align: center; 
-            overflow: hidden; /* 내용이 넘치지 않도록 설정 */
-            white-space: nowrap; /* 글자가 줄바꿈되지 않도록 설정 */
+            overflow: hidden; 
+            white-space: nowrap; 
+            touch-action: none; /* 터치 이벤트 반응 개선 */
+            background-color: #f9f9f9;
         }
         .fruit-box p {
-            font-size: 1.5rem; /* 과일 이름 크기 조정 */
-            margin: 5px 0 0 0; /* 위쪽 여백 조정 */
+            font-size: 1.5rem;
+            margin: 5px 0 0 0;
         }
         .word { 
             background-color: #ffeb3b; 
             display: inline-block; 
             margin: 10px; 
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
         }
         .message { 
             margin-top: 20px; 
@@ -63,6 +75,7 @@
         let currentSet = 0;
         const totalSets = 10;
         let correctCount = 0;
+        let draggedWord = null;
 
         function shuffleArray(array) {
             return array.sort(() => Math.random() - 0.5);
@@ -91,28 +104,20 @@
                 fruitBox.className = "fruit-box";
                 fruitBox.dataset.name = fruit.name;
                 fruitBox.innerHTML = `${fruit.emoji}<p></p>`;
+
+                // Drag and drop 지원 (PC)
                 fruitBox.ondragover = (event) => event.preventDefault();
                 fruitBox.ondrop = (event) => {
                     event.preventDefault();
-                    let word = event.dataTransfer.getData("text");
-                    let messageBox = document.getElementById("message");
-                    if (word === fruit.name) {
-                        fruitBox.style.border = "4px solid green";
-                        fruitBox.querySelector("p").textContent = word;
-                        correctCount++;
-                        if (correctCount === 2) {
-                            messageBox.textContent = "성공입니다!";
-                            messageBox.style.color = "green";
-                            setTimeout(() => {
-                                currentSet++;
-                                loadGame();
-                            }, 1000);
-                        }
-                    } else {
-                        messageBox.textContent = "다시 시도해보세요";
-                        messageBox.style.color = "red";
-                    }
+                    checkAnswer(event.dataTransfer.getData("text"), fruitBox);
                 };
+
+                // 터치 이벤트 지원 (모바일)
+                fruitBox.ontouchstart = (event) => event.preventDefault();
+                fruitBox.ontouchend = (event) => {
+                    if (draggedWord) checkAnswer(draggedWord, fruitBox);
+                };
+
                 fruitContainer.appendChild(fruitBox);
             });
 
@@ -126,13 +131,45 @@
                 wordElement.className = "word";
                 wordElement.draggable = true;
                 wordElement.textContent = word;
+
+                // Drag 지원 (PC)
                 wordElement.ondragstart = (event) => {
                     event.dataTransfer.setData("text", word);
                 };
+
+                // 터치 지원 (모바일)
+                wordElement.ontouchstart = (event) => {
+                    draggedWord = word;
+                    event.target.style.backgroundColor = "#ccc";
+                };
+                wordElement.ontouchend = (event) => {
+                    event.target.style.backgroundColor = "#ffeb3b";
+                };
+
                 wordContainer.appendChild(wordElement);
             });
 
             gameArea.appendChild(wordContainer);
+        }
+
+        function checkAnswer(word, fruitBox) {
+            let messageBox = document.getElementById("message");
+            if (word === fruitBox.dataset.name) {
+                fruitBox.style.border = "4px solid green";
+                fruitBox.querySelector("p").textContent = word;
+                correctCount++;
+                if (correctCount === 2) {
+                    messageBox.textContent = "성공입니다!";
+                    messageBox.style.color = "green";
+                    setTimeout(() => {
+                        currentSet++;
+                        loadGame();
+                    }, 1000);
+                }
+            } else {
+                messageBox.textContent = "다시 시도해보세요";
+                messageBox.style.color = "red";
+            }
         }
 
         window.onload = loadGame;
