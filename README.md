@@ -21,17 +21,17 @@
     <div id="message" class="message"></div>
     <script>
         const fruits = [
-            { name: "사과", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTMz/MDAxNzQzMjM1MjI5ODI1.xCICDEBco6fazERSuLqwpUIzbZpS0ewX65LgPRXRGFog.pmAwAo7OPKjqZggK4f4ocltQeBrGc7mJ4hnhjzI7WPUg.JPEG/apples-7566512_1280.jpg?type=w966" },
-            { name: "바나나", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMjA3/MDAxNzQzMjM1MjI5ODEx.8P36wfj5GkuyjxdcPGaAS_YqZ2RASNglK1L8HRjYFGMg.wquxEjPSiFTyhiEpiYvHcxCTcDFd4WjI9tVvfRs9kWEg.JPEG/banana-1025109_1280.jpg?type=w966" },
-            { name: "키위", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTEx/MDAxNzQzMjM1MjI5ODMz.ZGGv555b1G6S5LEdffJysVFAYfvI5twQOIT2zGLuAMgg.-tEEVCYrzyl9NrRbX6GGxrmiPPAP4HoEc3OCyGmjsPMg.JPEG/breakfast-1239438_1280.jpg?type=w966" },
-            { name: "망고", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTQ0/MDAxNzQzMjM1MjI5ODE4.LPl_fbgKT5w-mQoGmtZJmOcDFkSdlW31hO1Q7-fb0vcg.O0SHbECfVfZZCuaOPgxexWwSy-KLEdXcSxhf1tkyX-Yg.JPEG/mango-5171747_1280.jpg?type=w966" },
-            { name: "딸기", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTI3/MDAxNzQzMjM1MjI5ODMy.HMlwZQM6s3oOt7F6T26oDSSfZZY8hgA36Wa5IoRECRAg.6A97TYn3dUfkgyTMNaqQ6xkJ85oYhy6Q64u0Rve-vIwg.JPEG/strawberries-3359755_1280.jpg?type=w966" },
-            { name: "수박", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMjc0/MDAxNzQzMjM1MjMwMjk1.st34moUeutbSVex5gqAKQK6nutJk0rGdq0Pbo0yrUDAg.Jphzvf4dVgp9ul5r47lA7j0mOWgMxYkFqsNY-XMIoVAg.JPEG/watermelon-453214_1280.jpg?type=w966" },
-            { name: "포도", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTcz/MDAxNzQzMjM1MjMwMzg0.QfVBjUhyVSYscnhXTD6ivhTgkCuLOSEiDwhjJgNbPTcg.upr-fgSGaEJDB4sF_cWH8wrtxaVajDlEFg_6uRo-5G0g.JPEG/grapes-8306833_1280.jpg?type=w966" },
-            { name: "체리", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMjMg/MDAxNzQzMjM1MjMwNDU2.gu-hLtb9DTbEM4Ty9wdmU6YSnRQ_r9sjmhdn6YWu3Lkg.kl01lDwHT0jK9XwAzy8B-bW8yqcvr2siv-A2zZOmO8kg.JPEG/cherry-1914118_1280.jpg?type=w966" },
-            { name: "블루베리", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTc2/MDAxNzQzMjM1MjMwNDYx.aLszw-i7X16yFstfA63VNGOjeGn-VIaXpFAVdUQifgMg.LrTWc7yH1nTpF-sad4We3wmKWuRJhYwrhfBjc38TTrAg.JPEG/bilberries-2559051_1280.jpg?type=w966" },
-            { name: "파인애플", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfMTAz/MDAxNzQzMjM1MjMwNDc1.7AXtwzCCdXZ3VRzfmYDp1F-G7GGhRP2u3jmQmroXn4og.rg4gsH4_SoDRTn_D-DrRaBGrmiVpy4o95_6eTbe0VWwg.JPEG/pineapple-5108775_1280.jpg?type=w966" },
-            { name: "오렌지", image: "https://postfiles.pstatic.net/MjAyNTAzMjlfNDAg/MDAxNzQzMjM1MjI5ODE1.WyyG0P9qQTMMeBZgxg5XCTrSGTqK1_2frfTJmFxZ1okg.Xl0pQ2KLMCTcwg3yDqD_SOZgrhvufRo6gv8ichYWjIEg.JPEG/oranges-407429_1280.jpg?type=w966" }
+            { name: "사과", image: "https://pixabay.com/ko/photos/%EC%82%AC%EA%B3%BC-%EA%B3%BC%EC%9D%BC-%EB%86%8D%EC%9E%A5-%EC%9D%8C%EC%8B%9D-7566512/" },
+            { name: "바나나", image: "https://pixabay.com/ko/photos/%EB%B0%94%EB%82%98%EB%82%98-%EA%B3%BC%EC%9D%BC-%EC%9D%B5%EC%9D%80-%EC%8B%A0%EC%84%A0%ED%95%9C-614090/" },
+            { name: "키위", image: "https://pixabay.com/ko/photos/%ED%82%A4%EC%9C%84-%EA%B3%BC%EC%9D%BC-%EA%B3%BC%EC%9D%BC-%ED%82%A4%EC%9C%84-%EC%9D%8C%EC%8B%9D-400143/" },
+            { name: "망고", image: "https://pixabay.com/ko/photos/%EB%A7%9D%EA%B3%A0-%EC%8B%A0%EC%84%A0%ED%95%9C-%EA%B3%BC%EC%9D%BC-%EB%85%B8%EB%9E%80%EC%83%89-3485606/" },
+            { name: "딸기", image: "https://pixabay.com/ko/photos/%EB%94%B8%EA%B8%B0-%EA%B3%BC%EC%9D%BC-%EB%B9%A8%EA%B0%84%EC%83%89-%EC%9D%B5%EC%9D%80-1396330/" },
+            { name: "수박", image: "https://pixabay.com/ko/photos/%EC%88%98%EB%B0%95-%EA%B3%BC%EC%9D%BC-%EC%88%98%ED%99%95-%EC%83%9D%EC%82%B0-551235/" },
+            { name: "포도", image: "https://pixabay.com/ko/photos/%ED%8F%AC%EB%8F%84-%ED%91%B8%EB%A5%B8-%ED%8F%AC%EB%8F%84-%ED%8F%AC%EB%8F%84%EC%9B%90-%EB%86%8D%EC%97%85-8306833/" },
+            { name: "체리", image: "https://pixabay.com/ko/photos/%EB%B2%84%EC%B0%8C-%EA%B3%BC%EC%9D%BC-%EC%9D%8C%EC%8B%9D-%EB%AA%A8%EB%A0%90%EB%A1%9C-%EC%B2%B4%EB%A6%AC-371233/" },
+            { name: "블루베리", image: "https://pixabay.com/ko/photos/%EB%B8%94%EB%A3%A8%EB%B2%A0%EB%A6%AC-%EB%B8%94%EB%A3%A8-%EB%B2%A0%EB%A6%AC-%EA%B3%BC%EC%9D%BC-873784/" },
+            { name: "파인애플", image: "https://pixabay.com/ko/photos/%ED%8C%8C%EC%9D%B8%EC%95%A0%ED%94%8C-%EC%A1%B0%EA%B0%81-%EA%B3%BC%EC%9D%BC-%EB%B9%84%ED%83%80%EB%AF%BC-636562/" },
+            { name: "오렌지", image: "https://pixabay.com/ko/photos/%EC%98%A4%EB%A0%8C%EC%A7%80-%EA%B3%BC%EC%9D%BC-%EC%9D%8C%EC%8B%9D-407429/" }
         ];
         
         let currentSet = 0;
