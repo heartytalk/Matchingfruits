@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -114,7 +113,7 @@
     </script>
 </body>
 </html>
-    <p>하트선생님이 언어치료 수업을 위해 만들었어요.<br>
-    @heartytalk_slp<br>
-    tjdah0420@naver.com<br>
-    https://blog.naver.com/mindcarelog<br>
+    하트선생님이 언어치료 수업을 위해 만들었어요.
+    @heartytalk_slp
+    tjdah0420@naver.com
+    https://blog.naver.com/mindcarelog
