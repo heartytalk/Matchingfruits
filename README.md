@@ -8,14 +8,20 @@
         .game-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
         .fruit-box, .word { padding: 20px; border: 2px solid #ccc; border-radius: 5px; cursor: pointer; font-size: 2rem; }
         .fruit-box { 
-            width: 200px; 
-            height: 200px; 
+            width: 180px; 
+            height: 180px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             flex-direction: column; 
-            font-size: 6rem; /* 이모지 크기 증가 */
-            text-align: center; /* 이름도 가운데 정렬 */
+            font-size: 4rem; /* 이모지 크기 조정 */
+            text-align: center; 
+            overflow: hidden; /* 내용이 넘치지 않도록 설정 */
+            white-space: nowrap; /* 글자가 줄바꿈되지 않도록 설정 */
+        }
+        .fruit-box p {
+            font-size: 1.5rem; /* 과일 이름 크기 조정 */
+            margin: 5px 0 0 0; /* 위쪽 여백 조정 */
         }
         .word { 
             background-color: #ffeb3b; 
@@ -133,7 +139,6 @@
     </script>
 </body>
 </html>
-
     하트선생님이 언어치료 수업을 위해 만들었어요.
     @heartytalk_slp
     tjdah0420@naver.com
