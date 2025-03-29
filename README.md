@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -22,45 +21,45 @@
     <div id="message" class="message"></div>
     <script>
         const fruits = [
-            { name: "사과", image: "https://cdn.pixabay.com/photo/2017/09/26/13/50/apple-2788662_640.jpg" },
-            { name: "바나나", image: "https://cdn.pixabay.com/photo/2018/08/16/20/03/bananas-3616193_640.jpg" },
-            { name: "키위", image: "https://cdn.pixabay.com/photo/2016/11/18/15/56/kiwi-1839735_640.jpg" },
-            { name: "망고", image: "https://cdn.pixabay.com/photo/2016/07/22/09/59/mango-1534061_640.jpg" },
-            { name: "딸기", image: "https://cdn.pixabay.com/photo/2018/03/20/23/11/strawberries-3249761_640.jpg" },
-            { name: "수박", image: "https://cdn.pixabay.com/photo/2018/08/23/08/55/watermelon-3622979_640.jpg" },
-            { name: "포도", image: "https://cdn.pixabay.com/photo/2016/08/23/15/45/grapes-1616662_640.jpg" },
-            { name: "체리", image: "https://cdn.pixabay.com/photo/2018/06/28/19/17/cherries-3504853_640.jpg" },
-            { name: "블루베리", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/blueberries-1239279_640.jpg" },
-            { name: "파인애플", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/pineapple-1239425_640.jpg" },
-            { name: "오렌지", image: "https://cdn.pixabay.com/photo/2016/11/29/04/17/oranges-1868612_640.jpg" }
+            { name: "사과", image: "https://cdn.pixabay.com/photo/2015/03/26/09/39/apple-690027_960_720.jpg" },
+            { name: "바나나", image: "https://cdn.pixabay.com/photo/2018/08/16/20/03/bananas-3616193_960_720.jpg" },
+            { name: "키위", image: "https://cdn.pixabay.com/photo/2016/11/18/15/56/kiwi-1839735_960_720.jpg" },
+            { name: "망고", image: "https://cdn.pixabay.com/photo/2016/07/22/09/59/mango-1534061_960_720.jpg" },
+            { name: "딸기", image: "https://cdn.pixabay.com/photo/2018/03/20/23/11/strawberries-3249761_960_720.jpg" },
+            { name: "수박", image: "https://cdn.pixabay.com/photo/2018/08/23/08/55/watermelon-3622979_960_720.jpg" },
+            { name: "포도", image: "https://cdn.pixabay.com/photo/2016/08/23/15/45/grapes-1616662_960_720.jpg" },
+            { name: "체리", image: "https://cdn.pixabay.com/photo/2018/06/28/19/17/cherries-3504853_960_720.jpg" },
+            { name: "블루베리", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/blueberries-1239279_960_720.jpg" },
+            { name: "파인애플", image: "https://cdn.pixabay.com/photo/2016/03/05/19/02/pineapple-1239425_960_720.jpg" },
+            { name: "오렌지", image: "https://cdn.pixabay.com/photo/2016/11/29/04/17/oranges-1868612_960_720.jpg" }
         ];
-        
+
         let currentSet = 0;
         const totalSets = 10;
         let correctCount = 0;
-        
+
         function shuffleArray(array) {
             return array.sort(() => Math.random() - 0.5);
         }
-        
+
         function loadGame() {
             if (currentSet >= totalSets) {
                 alert("게임 완료!");
                 return;
             }
-            
+
             document.getElementById("message").textContent = "";
             document.getElementById("set-title").textContent = `${currentSet + 1}세트`;
             let gameArea = document.getElementById("game");
             gameArea.innerHTML = "";
             correctCount = 0;
-            
+
             let selectedFruits = shuffleArray([...fruits]).slice(0, 2);
             let words = shuffleArray(selectedFruits.map(f => f.name));
-            
+
             let fruitContainer = document.createElement("div");
             fruitContainer.className = "game-container";
-            
+
             selectedFruits.forEach(fruit => {
                 let fruitBox = document.createElement("div");
                 fruitBox.className = "fruit-box";
@@ -90,12 +89,12 @@
                 };
                 fruitContainer.appendChild(fruitBox);
             });
-            
+
             gameArea.appendChild(fruitContainer);
-            
+
             let wordContainer = document.createElement("div");
             wordContainer.className = "game-container";
-            
+
             words.forEach(word => {
                 let wordElement = document.createElement("div");
                 wordElement.className = "word";
@@ -106,12 +105,14 @@
                 };
                 wordContainer.appendChild(wordElement);
             });
-            
+
             gameArea.appendChild(wordContainer);
         }
-        
+
         window.onload = loadGame;
     </script>
+</body>
+</html>
 </body>
 </html>
 
